@@ -18,6 +18,7 @@ return static function (ContainerConfigurator $container): void {
         ->exclude([
             '../src/DependencyInjection/',
             '../src/Entity/',
+            '../src/Event/',
             '../src/SiganushkaTransactionBundle.php',
         ]);
 };
