@@ -4,15 +4,18 @@ declare(strict_types=1);
 
 namespace Siganushka\TransactionBundle\Entity;
 
+use Siganushka\Contracts\Doctrine\ExpirableInterface;
+use Siganushka\Contracts\Doctrine\ExpirableTrait;
 use Siganushka\Contracts\Doctrine\ResourceInterface;
 use Siganushka\Contracts\Doctrine\ResourceTrait;
 use Siganushka\Contracts\Doctrine\TimestampableInterface;
 use Siganushka\Contracts\Doctrine\TimestampableTrait;
 use Siganushka\GenericBundle\Utils\ClassUtils;
 
-abstract class Transaction implements ResourceInterface, TimestampableInterface
+abstract class Transaction implements ResourceInterface, ExpirableInterface, TimestampableInterface
 {
     use ResourceTrait;
+    use ExpirableTrait;
     use TimestampableTrait;
 
     protected ?string $number = null;

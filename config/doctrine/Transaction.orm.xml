@@ -20,7 +20,8 @@
     <field name="payRequest" type="json" nullable="true" />
     <field name="payResponse" type="json" nullable="true" />
     <field name="successful" type="boolean" />
+    <field name="expiredAt" type="datetime_immutable" nullable="true" />
     <field name="createdAt" type="datetime_immutable" />
-    <field name="updatedAt" type="datetime" nullable="true" />
+    <field name="updatedAt" type="datetime_immutable" nullable="true" />
   </entity>
 </doctrine-mapping>
