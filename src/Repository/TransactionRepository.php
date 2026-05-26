@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Siganushka\TransactionBundle\Repository;
 
-use Doctrine\Persistence\ManagerRegistry;
 use Siganushka\GenericBundle\Repository\GenericEntityRepository;
 use Siganushka\TransactionBundle\Entity\Transaction;
 
@@ -15,13 +14,6 @@ use Siganushka\TransactionBundle\Entity\Transaction;
  */
 class TransactionRepository extends GenericEntityRepository
 {
-    public function __construct(ManagerRegistry $registry)
-    {
-        /** @var class-string<T> */
-        $entityClass = Transaction::class;
-        parent::__construct($registry, $entityClass);
-    }
-
     /**
      * @return T|null
      */
